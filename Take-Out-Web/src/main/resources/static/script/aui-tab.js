@@ -1,4 +1,10 @@
-
+/**
+ * aui-tab.js
+ * @author 流浪男
+ * @todo more things to abstract, e.g. Loading css etc.
+ * Licensed under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
 (function( window, undefined ) {
     "use strict";
     var auiTab = function(params,callback) {
@@ -10,7 +16,7 @@
         params: {
             element: false,
             index: 1, //默认选中
-            repeatClick: false//是否允许重复点击
+            repeatClick: false //是否允许重复点击
         },
         _init: function(callback) {
         	var self = this;

@@ -1,14 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
 $(function () {
 
     $("#left li:first-child").addClass("active");
