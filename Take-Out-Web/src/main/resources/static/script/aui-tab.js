@@ -1,10 +1,3 @@
-/**
- * aui-tab.js
- * @author 流浪男
- * @todo more things to abstract, e.g. Loading css etc.
- * Licensed under the MIT license.
- * http://www.opensource.org/licenses/mit-license.php
- */
 (function( window, undefined ) {
     "use strict";
     var auiTab = function(params,callback) {
