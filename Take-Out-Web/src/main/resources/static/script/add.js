@@ -88,7 +88,8 @@ $(function () {
 		var s = mapToJson(str_list);
 
 		jin = parseFloat($("#totalpriceshow").text())
-		alert();
+		window.localStorage.setItem("nus", s);
+		window.sessionStorage.setItem("jin",jin);
 		url = "ordfrom.html? nus="+s+"&jin="+jin;//此处拼接内容
 		window.location.href = url;
 	})
