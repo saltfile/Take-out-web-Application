@@ -43,42 +43,7 @@
 			</ul>
 		</div>
 		<div id="muns" class="con">
-			<div id='asda' class="right-con con-active" style="display: none;">
-				<ul>
-					<li>
-						<div class="menu-img"><img src="image/img.jpg"></div>
-						<div class="menu-txt">
-							<h4 data-icon="00">珍珠奶茶</h4>
-							<p class="list1">月销量：123</p>
-							<p class="list2">
-								<b>￥</b><b>2.00</b>
-							</p>
-							<div class="btn">
-								<button class="minus"></button>
-								<i>0</i>
-								<button class="add"></button>
-								<i class="price">2.00</i>
-							</div>
-						</div>
-					</li>
-					<li>
-						<div class="menu-img"><img src="image/img.jpg"></div>
-						<div class="menu-txt">
-							<h4 data-icon="01">辣子鸡</h4>
-							<p class="list1">月销量：123</p>
-							<p class="list2">
-								<b>￥</b><b>3.00</b>
-							</p>
-							<div class="btn">
-								<button class="minus"></button>
-								<i>0</i>
-								<button class="add"></button>
-								<i class="price">3.00</i>
-							</div>
-						</div>
-					</li>
-				</ul>
-			</div>
+
 </div>
 		<div class="up1"></div>
 		<div class="shopcart-list fold-transition">
@@ -110,60 +75,7 @@
 <script type="text/javascript" src="script/add.js"></script>
 <script type="text/javascript" src="script/aui-tab.js" ></script>
 <script type="text/javascript">
-window.onload = function ()
-{
-   f();
-}
 
-function f() {
-    id = "xxx"
-	num = 2;
-    var trTemp = $("<div id='"+id+"' class="+"right-con con-active"+" style="+"display: none;"+"></div>");
-    var ulTemp = $("<ul id='"+id+"1"+"' ></ul>")
-
-    trTemp.appendTo("#muns")
-    ulTemp.appendTo("#"+id)
-	for (var i=1;i <= num;i++) {
-		var liTemp = $("<li id='" + id+"1" + i + "' ></li>");
-		liTemp.appendTo("#"+id+"1");
-
-		var m_img = $("<div id='"+id+"2"+i+"' class=\"menu-img\"></divid>")
-		m_img.appendTo("#"+ id+"1" + i);
-		var img_data = $("<img src=\"image/img.jpg\">")
-		img_data.appendTo("#"+id+"2"+i)
-
-
-		var text_mer = $("<div id='"+id+"3"+i+"' class=\"menu-txt\"></div>")
-		text_mer.appendTo("#"+id+"1"+i);
-
-		var data_h4 = $("<h4 data-icon=\"01\">辣子鸡</h4>")
-		data_h4.appendTo("#"+id+"3"+i);
-
-		var xiao_num = $("<p class=\"list1\">月销量：114</p>")
-		xiao_num.appendTo("#"+id+"3"+i);
-
-		var pic_div = $("<p id='"+id+"mon"+i+"' class=\"list2\"></p>")
-		pic_div.appendTo("#"+id+"3"+i);
-
-		var money_dan = $("<b>￥</b>")
-		money_dan.appendTo("#"+id+"mon"+i);
-		var pice = $("<b>3.00</b>")
-		pice.appendTo("#"+id+"mon"+i);
-
-		var add_div = $("<div id='"+id+"btn"+i+"' class=\"btn\"></div>");
-		add_div.appendTo("#"+id+"3"+i)
-
-		var add_btn = $("<button class=\"minus\"></button>");
-		add_btn.appendTo("#"+id+"btn"+i)
-
-
-
-	}
-
-
-
-
-}
     apiready = function() {
         api.parseTapmode();
     }

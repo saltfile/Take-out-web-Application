@@ -1,9 +1,73 @@
 $(function () {
 
+	$(document).ready(function(){
+
+		f();
+	})
+
+
+	function f() {
+		id = "xxx"
+		num = 2;
+		var trTemp = $("<div id='"+id+"' class="+"right-con con-active"+" style="+"display: none;"+"></div>");
+		var ulTemp = $("<ul id='"+id+"1"+"' ></ul>")
+
+		trTemp.appendTo("#muns")
+		ulTemp.appendTo("#"+id)
+		for (var i=1;i <= num;i++) {
+			var liTemp = $("<li id='" + id+"1" + i + "' ></li>");
+			liTemp.appendTo("#"+id+"1");
+
+			var m_img = $("<div id='"+id+"2"+i+"' class=\"menu-img\"></divid>")
+			m_img.appendTo("#"+ id+"1" + i);
+			var img_data = $("<img src=\"image/img.jpg\">")
+			img_data.appendTo("#"+id+"2"+i)
+
+
+			var text_mer = $("<div id='"+id+"3"+i+"' class=\"menu-txt\"></div>")
+			text_mer.appendTo("#"+id+"1"+i);
+
+			var data_h4 = $("<h4 data-icon=\"01\">辣子鸡</h4>")
+			data_h4.appendTo("#"+id+"3"+i);
+
+			var xiao_num = $("<p class=\"list1\">月销量：114</p>")
+			xiao_num.appendTo("#"+id+"3"+i);
+
+			var pic_div = $("<p id='"+id+"mon"+i+"' class=\"list2\"></p>")
+			pic_div.appendTo("#"+id+"3"+i);
+
+			var money_dan = $("<b>￥</b>")
+			money_dan.appendTo("#"+id+"mon"+i);
+			var pice = $("<b>3.00</b>")
+			pice.appendTo("#"+id+"mon"+i);
+
+			var add_div = $("<div id='"+id+"btn"+i+"' class=\"btn\"></div>");
+			add_div.appendTo("#"+id+"3"+i)
+
+			var add_btn = $("<button class=\"minus\"></button>");
+			add_btn.appendTo("#"+id+"btn"+i)
+
+			var prt = $("<i>0</i>");
+			prt.appendTo("#"+id+"btn"+i);
+
+			var m_btn = $("<button class=\"add\"></button>")
+			m_btn.appendTo("#"+id+"btn"+i);
+
+			var pir = $("<i class=\"price\">3.00</i>")
+			pir.appendTo("#"+id+"btn"+i);
+
+		}
+
+	}
+
+
+
+
     $("#left li:first-child").addClass("active");
     var e;
-	//商品点击增加
-    $(".add").click(function(){
+	//商品点击增加$(document).on('click','dom节点',function(){})
+    // $(".add").click(function(){
+	$(document).on('click','.add',function(){
         var n = $(this).prev().text();
         var num = parseFloat(n)+1;
         e = $(this).prev();//当前数量
