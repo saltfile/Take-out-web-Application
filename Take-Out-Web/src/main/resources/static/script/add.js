@@ -1,4 +1,9 @@
 $(function () {
+	var str_list = new Map;
+	var jin = 0;
+
+
+
 
 	$(document).ready(function(){
 		f();
@@ -26,7 +31,7 @@ $(function () {
 			var text_mer = $("<div id='"+id+"3"+i+"' class=\"menu-txt\"></div>")
 			text_mer.appendTo("#"+id+"1"+i);
 
-			var data_h4 = $("<h4 data-icon=\"01\">辣子鸡</h4>")
+			var data_h4 = $("<h4 data-icon=\"01\">辣子鸡"+i+"</h4>")
 			data_h4.appendTo("#"+id+"3"+i);
 
 			var xiao_num = $("<p class=\"list1\">月销量：114</p>")
@@ -52,7 +57,7 @@ $(function () {
 			var m_btn = $("<button class=\"add\"></button>")
 			m_btn.appendTo("#"+id+"btn"+i);
 
-			var pir = $("<i class=\"price\">3.00</i>")
+			var pir = $("<i class=\"price\">"+3.50+i+"</i>")
 			pir.appendTo("#"+id+"btn"+i);
 
 		}
@@ -60,13 +65,37 @@ $(function () {
 	}
 
 
-
-
+	function  strMapToObj(strMap){
+		let obj= Object.create(null);
+		for (let[k,v] of strMap) {
+			obj[k] = v;
+		}
+		return obj;
+	}
+	/**
+	 *map转换为json
+	 */
+	function  mapToJson(map) {
+		return JSON.stringify(strMapToObj(map));
+	}
 
     $("#left li:first-child").addClass("active");
     var e;
 	//商品点击增加$(document).on('click','dom节点',function(){})
     // $(".add").click(function(){
+
+	$(document).on('click','#btnselect',function(){
+		var s = mapToJson(str_list);
+
+		jin = parseFloat($("#totalpriceshow").text())
+		alert();
+		url = "ordfrom.html? nus="+s+"&jin="+jin;//此处拼接内容
+		window.location.href = url;
+	})
+	$(document).on('click','#back_main',function(){
+		window.location.href = "./user_main.html"
+	})
+
 	$(document).on('click','.add',function(){
         var n = $(this).prev().text();
         var num = parseFloat(n)+1;
@@ -85,8 +114,10 @@ $(function () {
 	    var nm = $("#totalcountshow").html(); //获取数量
 	    $("#totalcountshow").html(nm*1+1);
 	    jss();   //改变按钮样式
+		str_list.set(m,parseInt(num))
 
-	    var acount =num;
+
+		var acount =num;
 	    var sum = (danjia*acount).toFixed(2);
 	    var price =danjia;
 		//判断购物车里是否有商品，是否有相同规格的商品
@@ -155,7 +186,7 @@ $(function () {
 		var n = parseInt($(this).next().text())-1;  //当前商品数量
 		var s = parseFloat($("#totalpriceshow").text());  //总金额
 		var znum=0;
-
+		str_list.set(m,n);
 		$(".list-content ul li").each(function(){
 			znum = znum + parseInt($(this).find('.li_acount').text());
 		})
