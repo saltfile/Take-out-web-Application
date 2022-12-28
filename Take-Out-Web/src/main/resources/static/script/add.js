@@ -1,7 +1,6 @@
 $(function () {
 
 	$(document).ready(function(){
-
 		f();
 	})
 
@@ -59,6 +58,7 @@ $(function () {
 		}
 
 	}
+
 
 
 
