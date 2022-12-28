@@ -932,15 +932,14 @@ SELECT|sys.sys_config:null
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="294" parent="287" name="weight">
+    <column id="294" parent="287" name="aid">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
-      <DefaultExpression>1</DefaultExpression>
     </column>
     <key id="295" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>accout</ColNames>
+      <ColNames>aid</ColNames>
       <Primary>1</Primary>
     </key>
     <column id="296" parent="288" name="type">
@@ -978,88 +977,91 @@ SELECT|sys.sys_config:null
       <Position>8</Position>
       <DataType>varchar(150)|0s</DataType>
     </column>
-    <column id="304" parent="289" name="accout">
-      <Position>1</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="305" parent="289" name="password">
-      <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <column id="306" parent="289" name="weight">
-      <Position>3</Position>
-      <DataType>int|0s</DataType>
-      <NotNull>1</NotNull>
-    </column>
-    <key id="307" parent="289" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>accout</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="308" parent="290" name="order_num">
+    <column id="304" parent="289" name="oid">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>null</SequenceIdentity>
     </column>
-    <column id="309" parent="290" name="car_tel">
+    <column id="305" parent="289" name="accout">
+      <Position>2</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <column id="306" parent="289" name="password">
+      <Position>3</Position>
+      <DataType>varchar(30)|0s</DataType>
+    </column>
+    <column id="307" parent="289" name="weight">
+      <Position>4</Position>
+      <DataType>tinyint(1)|0s</DataType>
+    </column>
+    <key id="308" parent="289" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>oid</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="309" parent="290" name="order_num">
+      <Position>1</Position>
+      <DataType>int|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>null</SequenceIdentity>
+    </column>
+    <column id="310" parent="290" name="car_tel">
       <Position>2</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="310" parent="290" name="del_tel">
+    <column id="311" parent="290" name="del_tel">
       <Position>3</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="311" parent="290" name="status">
+    <column id="312" parent="290" name="status">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>0</DefaultExpression>
     </column>
-    <column id="312" parent="290" name="mark">
+    <column id="313" parent="290" name="mark">
       <Position>5</Position>
       <DataType>varchar(200)|0s</DataType>
     </column>
-    <column id="313" parent="290" name="timestamp">
+    <column id="314" parent="290" name="timestamp">
       <Position>6</Position>
       <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="314" parent="290" name="meals">
+    <column id="315" parent="290" name="meals">
       <Position>7</Position>
       <DataType>varchar(1024)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="315" parent="290" name="sum">
+    <column id="316" parent="290" name="sum">
       <Position>8</Position>
       <DataType>double|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <key id="316" parent="290" name="PRIMARY">
+    <key id="317" parent="290" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>order_num</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="317" parent="291" name="tel">
+    <column id="318" parent="291" name="tel">
       <Position>1</Position>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="318" parent="291" name="weight">
+    <column id="319" parent="291" name="weight">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>-1</DefaultExpression>
     </column>
-    <column id="319" parent="291" name="password">
+    <column id="320" parent="291" name="password">
       <Position>3</Position>
       <DataType>varchar(30)|0s</DataType>
     </column>
-    <key id="320" parent="291" name="PRIMARY">
+    <key id="321" parent="291" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>tel</ColNames>
       <Primary>1</Primary>

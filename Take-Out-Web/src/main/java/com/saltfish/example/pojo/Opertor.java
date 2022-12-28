@@ -10,5 +10,5 @@ public class Opertor {
     /**
      * 权限
      */
-    public String weight;
+    public boolean weight;
 }
