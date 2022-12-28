@@ -20,7 +20,7 @@ $(function () {
 
                 if(res.toString() == 'Y'){
                     console.log(res)
-                    location.href = '../../userpage.html'
+                    location.href = '../../operatorpage.html'
 
                 }else if (res.toString() == "AY"){
                     console.log(res)
