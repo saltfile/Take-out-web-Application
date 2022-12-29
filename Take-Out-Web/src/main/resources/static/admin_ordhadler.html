@@ -6,14 +6,14 @@
     <title>查看入库单</title>
     <link rel="stylesheet" href="./css/UpdateStyle.css"/>
     <link rel="stylesheet" href="./css/ss.css"/>
-    <script src="./js/list.js"></script>
-    <script type="text/javascript" src="./js/jquery.min.js"></script>
-    <script type="text/javascript" src="./js/request/LidLoad.js"></script>
-    <script type="text/javascript" src="./script/requet/AdminLib.js"></script>
-    <script type="text/javascript" src="js/echarts.js"></script>
-    <script type="text/javascript" src="js/echarts-box.js"></script>
-    <script type="text/javascript" src="js/echarts-option.js"></script>
-    <script type="text/javascript" src="js/echarts.min.js"></script>
+    <script src="./script/list.js"></script>
+    <script type="text/javascript" src="./script/jquery.min.js"></script>
+    <script type="text/javascript" src="./script/requet/admin.js"></script>
+    <script type="text/javascript" src="script/requet/admin_load_ord.js"></script>
+    <script type="text/javascript" src="script/echarts.js"></script>
+    <script type="text/javascript" src="script/echarts-box.js"></script>
+    <script type="text/javascript" src="script/echarts-option.js"></script>
+    <script type="text/javascript" src="script/echarts.min.js"></script>
     <link rel="stylesheet" href="./css/iconfont.css"/>
     <link rel="stylesheet" href="./css/style.css"/>
     <link rel="stylesheet" href="./css/mydiv.css"/>
@@ -21,7 +21,7 @@
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <a href="./index.html" class="layui-hide-xs"><div class="layui-logo"><h4>仓库管理系统</h4></div></a>
+        <a href="./index.html" class="layui-hide-xs"><div class="layui-logo"><h4>管理员后台</h4></div></a>
         <a href="javascript:;" class="layui-hide-xs"><div class="fsSwitchMenu"><i class="fa fa-outdent"></i></div></a>
 
         <!-- 顶部菜单 -->
@@ -47,7 +47,7 @@
 
 
 <div class="box">
-    <h1>Opertor_PingTai</h1>
+    <h1>Admin_PingTai</h1>
     <h1>         </h1>
     <h2></h2>
     <div class="middle">
@@ -59,18 +59,22 @@
                 <a href="admin_ordhadler.html" class="btn"><i class="iconfont icon-user"></i>订单操作</a>
             </li>
             <li class="item" id="messages">
-                <a href="opertot_handle.html" class="btn"><i class="iconfont icon-mail"></i>操作员管理</a>
+                <a href="admin_operhander.html" class="btn"><i class="iconfont icon-mail"></i>操作员管理</a>
             </li>
             <li class="item" id="opertor">
-                <a href="opertot_handle.html" class="btn"><i class="iconfont icon-mail"></i>删除操作员</a>
+                <a href="admin_delop.html" class="btn"><i class="iconfont icon-mail"></i>删除操作员</a>
             </li>
 
             <li class="item" id="a">
-                <a href="opertot_handle.html" class="btn"><i class="iconfont icon-mail"></i>添加操作员</a>
+                <a href="admin_addopr.html" class="btn"><i class="iconfont icon-mail"></i>添加操作员</a>
+            </li>
+            <li class="item" id="b">
+                <a href="admin_add.html" class="btn"><i class="iconfont icon-mail"></i>添加管理员</a>
             </li>
         </ul>
     </div>
 </div>
+
 
 <div class="loadpage">
     <div class="load-v1">

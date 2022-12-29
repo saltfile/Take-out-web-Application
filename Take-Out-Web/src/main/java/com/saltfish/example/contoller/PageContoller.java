@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class PageContoller {
     @RequestMapping("/meun")
     public String STest(){
-        return "/choose_meal.html";
+        return "/index.html";
     }
+    @RequestMapping("/login")
+    public String login_admin(){return "/login.html";}
 }

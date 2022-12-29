@@ -3,11 +3,13 @@
 <head>
     <!-- 查看表单专用 -->
     <meta charset="utf-8">
-    <title>查看入库单</title>
+    <title>删除操作员</title>
     <link rel="stylesheet" href="./css/UpdateStyle.css"/>
     <link rel="stylesheet" href="./css/ss.css"/>
-    <script src="./js/list.js"></script>
+    <script src="./script/list.js"></script>
     <script type="text/javascript" src="./script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/requet/admin.js"></script>
+    <script type="text/javascript" src="script/requet/admin_load_opr.js"></script>
     <script type="text/javascript" src="script/echarts.js"></script>
     <script type="text/javascript" src="script/echarts-box.js"></script>
     <script type="text/javascript" src="script/echarts-option.js"></script>
@@ -19,7 +21,7 @@
 <body>
 <div class="layui-layout layui-layout-admin">
     <div class="layui-header">
-        <a href="./index.html" class="layui-hide-xs"><div class="layui-logo"><h4>仓库管理系统</h4></div></a>
+        <a href="./index.html" class="layui-hide-xs"><div class="layui-logo"><h4>管理员后台</h4></div></a>
         <a href="javascript:;" class="layui-hide-xs"><div class="fsSwitchMenu"><i class="fa fa-outdent"></i></div></a>
 
         <!-- 顶部菜单 -->
@@ -45,7 +47,7 @@
 
 
 <div class="box">
-    <h1>Opertor_PingTai</h1>
+    <h1>Admin_PingTai</h1>
     <h1>         </h1>
     <h2></h2>
     <div class="middle">
@@ -64,11 +66,15 @@
             </li>
 
             <li class="item" id="a">
-                <a href="opertot_handle.html" class="btn"><i class="iconfont icon-mail"></i>添加操作员</a>
+                <a href="admin_addopr.html" class="btn"><i class="iconfont icon-mail"></i>添加操作员</a>
+            </li>
+            <li class="item" id="b">
+                <a href="admin_add.html" class="btn"><i class="iconfont icon-mail"></i>添加管理员</a>
             </li>
         </ul>
     </div>
 </div>
+
 
 <div class="loadpage">
     <div class="load-v1">

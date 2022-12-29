@@ -42,7 +42,10 @@ public class OdrfromService {
     }
 
 
-    
+    public String SelectAll(){
+        Gson gson = new Gson();
+        return gson.toJson(ordfromDao.findAll());
+    }
     
 
 

@@ -32,6 +32,6 @@ public interface userDao {
 
     //禁用（启用）用户
     @Update("UPDATE user SET weight=#{weight}WHERE tel = #{old} ")
-    int update_weight( @Param("weight")int weight,@Param("old")String tel);
+    int update_weight( @Param("weight")boolean weight,@Param("old")String tel);
 
 }

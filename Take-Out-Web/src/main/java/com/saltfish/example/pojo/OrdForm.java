@@ -33,7 +33,6 @@ public class OrdForm {
     /**
      *     用户账号
      */
-    public String user;
     /**
      * 点的东西 json to list
      */
@@ -43,5 +42,6 @@ public class OrdForm {
      * 时间戳
      */
     public Timestamp timestamp;
+    public double sum;
 
 }

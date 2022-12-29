@@ -1,5 +1,6 @@
 package com.saltfish.example.dao;
 
+import com.saltfish.example.pojo.Admin;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,12 +16,11 @@ class adminDaoTest {
 
     @Test
     void insert() {
-       if (adminDao.insert("admin","123456")>0){
-           System.out.println("创建成功");
+       Admin a = adminDao.find("admin","123456");
+        System.out.println(a.accout);
        }
 
 
 
 
     }
-}

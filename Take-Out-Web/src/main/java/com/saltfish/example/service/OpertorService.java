@@ -1,5 +1,6 @@
 package com.saltfish.example.service;
 
+import com.google.gson.Gson;
 import com.saltfish.example.dao.opertorDao;
 import com.saltfish.example.dao.ordfromDao;
 import com.saltfish.example.pojo.OrdForm;
@@ -17,6 +18,11 @@ public class OpertorService {
 
     @Resource
     ordfromDao ordfromDao;
+
+    public String SelectAll(){
+        Gson gson = new Gson();
+       return gson.toJson(opertorDao.findall());
+    }
 
     /**
      * 浏览全部订单

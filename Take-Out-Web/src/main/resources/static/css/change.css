@@ -104,3 +104,23 @@
 				margin-top: 20px;
 
 			}
+			#btn_add{
+				width: 150px;
+				height: 40px;
+				background-color: #0055ff;
+				border: 1px solid  #0055ff;
+				border-radius: 6px;
+				/* font-weight: bold; */
+				margin-top: 20px;
+
+			}
+			#admin_add{
+				width: 150px;
+				height: 40px;
+				background-color: #0055ff;
+				border: 1px solid  #0055ff;
+				border-radius: 6px;
+				/* font-weight: bold; */
+				margin-top: 20px;
+
+			}
