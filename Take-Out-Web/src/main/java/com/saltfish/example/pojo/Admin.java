@@ -13,7 +13,7 @@ public class Admin {
      */
     public String password;
     /**
-     * 权限
+     * 管理员号
      */
-    public String weight;
+    public int aid;
 }

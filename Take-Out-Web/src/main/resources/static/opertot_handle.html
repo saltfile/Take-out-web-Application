@@ -9,7 +9,7 @@
 		<script src="./js/list.js"></script>
 		<script type="text/javascript" src="./js/jquery.min.js"></script>
 		<script type="text/javascript" src="./js/request/LidLoad.js"></script>
-		<script type="text/javascript" src="./script/requet/AdminLib.js"></script>
+		<script type="text/javascript" src="./js/request/AdminLib.js"></script>
 		<script type="text/javascript" src="js/echarts.js"></script>
 		<script type="text/javascript" src="js/echarts-box.js"></script>
 		<script type="text/javascript" src="js/echarts-option.js"></script>
@@ -61,6 +61,7 @@
 					<li class="item" id="messages">
 						<a href="opertot_handle.html" class="btn"><i class="iconfont icon-mail"></i>订单分配</a>
 					</li>
+
 				</ul>
 			</div>
 		</div>
@@ -77,16 +78,17 @@
 							                <input id="Id" type="text" name="id" autocomplete="off" class="layui-input">
 							            </div>
 							        </div>
+
+									<div class="layui-inline">
+										<label class="layui-form-mid">分配外卖员：</label>
+										<div class="layui-input-inline" style="">
+											<input id="Time" type="text" name="createDate" autocomplete="off" class="layui-input fsDate" daterange="1" placeholder=" - ">
+										</div>
+									</div>
 							        <div class="layui-inline">
-							            <label class="layui-form-mid">名称：</label>
+							            <label class="layui-form-mid">状态更改为：</label>
 							            <div class="layui-input-inline" style="width: 100px;">
 							                <input id="Name" type="text" name="name" autocomplete="off" class="layui-input">
-							            </div>
-							        </div>
-							        <div class="layui-inline">
-							            <label class="layui-form-mid">时间：</label>
-							            <div class="layui-input-inline" style="">
-							                <input id="Time" type="text" name="createDate" autocomplete="off" class="layui-input fsDate" daterange="1" placeholder=" - ">
 							            </div>
 							        </div>
 							        <div class="layui-inline">
@@ -94,6 +96,12 @@
 							                <button id="screah" class="layui-btn" type="button" function="query">查询</button>
 							            </div>
 							        </div>
+
+									<div class="layui-inline">
+										<div class="layui-input-inline">
+											<button id="up_state" class="layui-btn" type="button" function="query">更改状态</button>
+										</div>
+									</div>
 							    </div>
 							</form>
 							<HR align=center width=100% top = 90% color=#000000 SIZE=2>

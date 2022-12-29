@@ -12,7 +12,6 @@ public interface adminDao {
     @Results({
             @Result(property = "accout", column = "accout"),
             @Result(property = "password", column = "password"),
-            @Result(property = "weight", column = "weight"),
     })
     @Select("SELECT accout,password,weight FROM admin")
     List<Admin> findAll();
