@@ -21,6 +21,12 @@ public class AdminService {
     @Resource
     userDao userDao;
 
+    /**
+     * 管理员登陆
+     * @param accout 账号
+     * @param password 密码
+     * @return
+     */
 
     public String LoginAdmin(String accout,String password){
         System.out.println(accout+" "+password);
@@ -53,6 +59,7 @@ public class AdminService {
      * @return 是否成功
      */
     public String CreateAdmin(String accout,String password){
+
         if (adminDao.find(accout, password)!=null){
             HashMap<String,Object> mes = new HashMap<>();
             mes.put("status",false);

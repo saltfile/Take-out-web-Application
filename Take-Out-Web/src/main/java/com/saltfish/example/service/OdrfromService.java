@@ -4,9 +4,11 @@ import com.google.gson.Gson;
 import com.saltfish.example.dao.ordfromDao;
 import com.saltfish.example.pojo.Meals;
 import com.saltfish.example.pojo.OrdForm;
+import com.saltfish.example.util.json_Util;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.HashMap;
 
 @Service
 public class OdrfromService {
@@ -23,8 +25,21 @@ public class OdrfromService {
      * @param sum 价钱总和
      * @return 是否成功
      */
-    public boolean CreateOrdfrom(String car_tel,String del_tel,String mark,String meals,double sum){
-        return ordfromDao.insert(car_tel,del_tel,0,mark,meals,sum)>0;
+    public String CreateOrdfrom(String car_tel,String mark,String meals,double sum){
+
+        if (ordfromDao.insert(car_tel,0,mark,meals,sum)>0) {
+                HashMap<String,Object> mes = new HashMap<>();
+                mes.put("status",true);
+                mes.put("msg","订单成功");
+                return json_Util.maptoJson(mes);
+            }else {
+                HashMap<String,Object> mes = new HashMap<>();
+                mes.put("status",false);
+                mes.put("msg","订单失败");
+                return json_Util.maptoJson(mes);
+            }
+
+
     }
 
 
@@ -46,7 +61,34 @@ public class OdrfromService {
         Gson gson = new Gson();
         return gson.toJson(ordfromDao.findAll());
     }
-    
+
+    public String UpdateOrd(int oid,String tel,int status){
+        if (ordfromDao.update(oid,tel,status)>0){
+            HashMap<String,Object> mes = new HashMap<>();
+            mes.put("status",true);
+            mes.put("msg","更改成功");
+            return json_Util.maptoJson(mes);
+        }else {
+            HashMap<String,Object> mes = new HashMap<>();
+            mes.put("status",false);
+            mes.put("msg","更改失败");
+            return json_Util.maptoJson(mes);
+        }
+
+    }
+    public String UpdateStatus(int oid,int status){
+        if (ordfromDao.updateStatus(oid,status)>0){
+            HashMap<String,Object> mes = new HashMap<>();
+            mes.put("status",true);
+            mes.put("msg","更改成功");
+            return json_Util.maptoJson(mes);
+        }else {
+            HashMap<String,Object> mes = new HashMap<>();
+            mes.put("status",false);
+            mes.put("msg","更改失败");
+            return json_Util.maptoJson(mes);
+        }
+    }
 
 
 }

@@ -12,7 +12,7 @@ class OdrfromServiceTest {
     OdrfromService odrfromService;
     @Test
     void createOrdfrom() {
-        odrfromService.CreateOrdfrom("13212512315","13545554125","mark","{aaa:1,bbb:2}",80.02);
+//        odrfromService.CreateOrdfrom("13212512315","13545554125","mark","{aaa:1,bbb:2}",80.02);
     }
 
     @Test
