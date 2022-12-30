@@ -7,10 +7,11 @@ import lombok.Data;
  */
 @Data
 public class Meal {
+
+    public int num;
     /**
      *  类型
      */
-
     public String type;
     /**
      * 名字
