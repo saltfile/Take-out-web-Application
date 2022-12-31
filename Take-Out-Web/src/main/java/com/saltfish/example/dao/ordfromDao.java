@@ -37,15 +37,17 @@ public interface ordfromDao {
     @Select("SELECT order_num,car_tel,del_tel,status,mark,timestamp,meals,sum FROM ordfrom where car_tel = #{tel}")
     public List<OrdForm> findByCarTel(@Param("tel")String num);
 
-    @Insert("insert into ordfrom(car_tel,del_tel,status,mark,timestamp,meals,sum)values (#{car_tel},#{del_tel},#{status},#{mark},NOW(),#{meals},#{sum})")
-    int insert(@Param("car_tel")String car_tel,@Param("del_tel")String del_tel,
+    @Insert("insert into ordfrom(car_tel,status,mark,timestamp,meals,sum)values (#{car_tel},#{status},#{mark},NOW(),#{meals},#{sum})")
+    int insert(@Param("car_tel")String car_tel,
                @Param("status")int status,@Param("mark")String mark,
                @Param("meals")String meal_jsons,@Param("sum")double sum);
 
     @Delete("DELETE FROM ordfrom WHERE order_num =#{id}")
     int delete(@Param("id")int id);
 
-    @Update("UPDATE meal SET intro = #{intro},img=#{img} WHERE name = #{name} ")
-    int update(@Param("intro")String intro, @Param("img")String img, @Param("name") String name);
+    @Update("UPDATE ordfrom SET del_tel=#{del_tel},status=#{status} WHERE order_num = #{oid} ")
+    int update(@Param("oid")int oid, @Param("del_tel")String del_tel, @Param("status") int status);
 
+    @Update("UPDATE ordfrom SET status=#{status} WHERE order_num = #{oid} ")
+    int updateStatus(@Param("oid")int oid, @Param("status") int status);
 }
